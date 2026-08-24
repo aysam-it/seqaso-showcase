@@ -91,7 +91,7 @@ export function About() {
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {t.about.pillars.map((p, i) => {
-              const Icon = pillarIcons[i];
+              const Icon = pillarIcons[i] ?? Award;
               return (
                 <div
                   key={p.title}
@@ -122,7 +122,7 @@ export function Services() {
         <SectionHeader kicker={t.services.kicker} title={t.services.title} subtitle={t.services.subtitle} />
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {t.services.items.map((s, i) => {
-            const Icon = icons[i];
+            const Icon = icons[i] ?? Code2;
             return (
               <article
                 key={s.title}
@@ -154,7 +154,7 @@ export function Sectors() {
         <SectionHeader kicker={t.sectors.kicker} title={t.sectors.title} subtitle={t.sectors.subtitle} />
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.sectors.items.map((s, i) => {
-            const Icon = icons[i];
+            const Icon = icons[i] ?? Code2;
             return (
               <div
                 key={s.title}
@@ -188,7 +188,7 @@ export function TechWatch() {
         <SectionHeader kicker={t.watch.kicker} title={t.watch.title} subtitle={t.watch.subtitle} />
         <div className="mt-14 grid gap-5 lg:grid-cols-3">
           {t.watch.items.map((w, i) => {
-            const Icon = icons[i];
+            const Icon = icons[i] ?? Code2;
             return (
               <article
                 key={w.title}
@@ -219,7 +219,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
     if (!el) return;
     const io = new IntersectionObserver(
       (entries) => {
-        if (!entries[0].isIntersecting) return;
+        if (!entries[0]?.isIntersecting) return;
         io.disconnect();
         const duration = 1400;
         const start = performance.now();
