@@ -7,10 +7,15 @@ export type LangCtx = {
   t: (typeof content)["fr"];
 };
 
-export const LangContext = createContext<LangCtx | null>(null);
+const fallback: LangCtx = {
+  lang: "fr",
+  setLang: () => {},
+  t: content.fr,
+};
+
+export const LangContext = createContext<LangCtx>(fallback);
 
 export function useLang() {
-  const ctx = useContext(LangContext);
-  if (!ctx) throw new Error("useLang must be used within LangProvider");
-  return ctx;
+  return useContext(LangContext);
 }
+
