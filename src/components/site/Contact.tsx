@@ -1,8 +1,7 @@
 import { useState, type FormEvent } from "react";
-import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { toast } from "sonner";
 import { useLang } from "@/lib/lang";
-import { contactDetails } from "@/lib/content";
 
 export function Contact() {
   const { t } = useLang();
@@ -25,8 +24,8 @@ export function Contact() {
   return (
     <section id="contact" className="relative scroll-mt-24 py-24 sm:py-32">
       <div className="orb size-[28rem] -left-24 bottom-0 bg-primary/15" aria-hidden="true" />
-      <div className="relative mx-auto grid w-[min(1180px,92%)] gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
+      <div className="relative mx-auto w-[min(1180px,92%)]">
+        <div className="mx-auto max-w-2xl text-center">
           <span className="reveal inline-block rounded-full border border-border bg-secondary/40 px-3 py-1 text-xs font-semibold tracking-widest text-primary uppercase">
             {t.contact.kicker}
           </span>
@@ -36,31 +35,9 @@ export function Contact() {
           <p className="reveal mt-3 text-muted-foreground [transition-delay:120ms]">
             {t.contact.subtitle}
           </p>
-
-          <ul className="reveal mt-10 space-y-4 [transition-delay:180ms]">
-            {[
-              { Icon: Mail, label: contactDetails.email, href: `mailto:${contactDetails.email}` },
-              { Icon: Phone, label: contactDetails.phone, href: `tel:${contactDetails.phone.replace(/\s/g, "")}` },
-              { Icon: MapPin, label: t.contact.address },
-              { Icon: Clock, label: t.contact.hours },
-            ].map(({ Icon, label, href }) => (
-              <li key={label} className="flex items-center gap-3 text-sm">
-                <span className="grid size-10 shrink-0 place-items-center rounded-xl border border-border bg-secondary/40 text-primary">
-                  <Icon className="size-4" aria-hidden="true" />
-                </span>
-                {href ? (
-                  <a href={href} className="text-foreground transition-colors hover:text-primary">
-                    {label}
-                  </a>
-                ) : (
-                  <span className="text-muted-foreground">{label}</span>
-                )}
-              </li>
-            ))}
-          </ul>
         </div>
 
-        <form onSubmit={onSubmit} className="reveal glass rounded-3xl p-6 sm:p-8 [transition-delay:120ms]">
+        <form onSubmit={onSubmit} className="reveal mx-auto mt-10 max-w-2xl glass rounded-3xl p-6 sm:p-8 [transition-delay:120ms]">
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <label htmlFor="name" className="mb-1.5 block text-sm font-medium">
