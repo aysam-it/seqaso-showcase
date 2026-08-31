@@ -16,7 +16,7 @@ import {
   ShoppingCart,
   TestTube2,
 } from "lucide-react";
-import { useLang } from "@/lib/lang";
+import { useLang } from "@/lib/lang-context";
 
 function SectionHeader({
   kicker,

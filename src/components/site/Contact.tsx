@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
-import { useLang } from "@/lib/lang";
+import { useLang } from "@/lib/lang-context";
 
 export function Contact() {
   const { t } = useLang();

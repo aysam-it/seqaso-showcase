@@ -1,5 +1,5 @@
 import { Linkedin, Mail, Phone, ShieldCheck, Twitter } from "lucide-react";
-import { useLang } from "@/lib/lang";
+import { useLang } from "@/lib/lang-context";
 import { contactDetails } from "@/lib/content";
 
 export function Footer() {

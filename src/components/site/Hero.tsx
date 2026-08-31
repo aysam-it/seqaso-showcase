@@ -1,5 +1,5 @@
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
-import { useLang } from "@/lib/lang";
+import { useLang } from "@/lib/lang-context";
 
 export function Hero() {
   const { t } = useLang();

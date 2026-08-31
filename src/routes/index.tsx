@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Toaster } from "@/components/ui/sonner";
-import { LangProvider, useReveal } from "@/lib/lang";
+import { LangProvider } from "@/lib/lang";
+import { useReveal } from "@/lib/lang-hooks";
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { About, Sectors, Services, Stats, TechWatch } from "@/components/site/Sections";
