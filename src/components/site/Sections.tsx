@@ -12,6 +12,7 @@ import {
   Lightbulb,
   Lock,
   Radio,
+  ShieldCheck,
   ShoppingCart,
   TestTube2,
 } from "lucide-react";
@@ -43,7 +44,7 @@ function SectionHeader({
 
 export function About() {
   const { t } = useLang();
-  const pillarIcons = [Award, Lock, Lock, Lightbulb];
+  const pillarIcons = [Award, ShieldCheck, Lock, Lightbulb];
 
   return (
     <section id="about" className="relative scroll-mt-24 py-24 sm:py-32">
