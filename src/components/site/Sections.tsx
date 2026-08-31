@@ -43,7 +43,7 @@ function SectionHeader({
 
 export function About() {
   const { t } = useLang();
-  const pillarIcons = [Award, ShieldCheck, Lock, Lightbulb];
+  const pillarIcons = [Award, Lock, Lock, Lightbulb];
 
   return (
     <section id="about" className="relative scroll-mt-24 py-24 sm:py-32">
@@ -77,7 +77,7 @@ export function About() {
 
 export function Services() {
   const { t } = useLang();
-  const icons = [Code2, TestTube2, Bot, ShieldCheck, Cloud, Database];
+  const icons = [Code2, TestTube2, Bot];
 
   return (
     <section id="services" className="relative scroll-mt-24 py-16 sm:py-20">
