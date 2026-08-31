@@ -42,7 +42,7 @@ export const content = {
     },
     services: {
       kicker: "Nos services",
-      title: "Six expertises complémentaires",
+      title: "Trois expertises complémentaires",
       subtitle: "Un accompagnement de bout en bout, du cadrage au run.",
       items: [
         {
@@ -56,18 +56,6 @@ export const content = {
         {
           title: "Automatisation des tests",
           desc: "Frameworks d'automatisation, tests d'API, E2E et intégration continue.",
-        },
-        {
-          title: "Cybersécurité",
-          desc: "Audits, tests d'intrusion et mise en conformité de vos systèmes d'information.",
-        },
-        {
-          title: "Cloud & DevOps",
-          desc: "Industrialisation, infrastructure as code et observabilité de vos plateformes.",
-        },
-        {
-          title: "Data & IA",
-          desc: "Pipelines de données, tableaux de bord et intégration de modèles d'IA.",
         },
       ],
     },
@@ -188,7 +176,7 @@ export const content = {
     },
     services: {
       kicker: "Our services",
-      title: "Six complementary expertises",
+      title: "Three complementary expertises",
       subtitle: "End-to-end support, from framing to run.",
       items: [
         {
@@ -202,18 +190,6 @@ export const content = {
         {
           title: "Test automation",
           desc: "Automation frameworks, API and E2E testing, continuous integration.",
-        },
-        {
-          title: "Cybersecurity",
-          desc: "Audits, penetration testing and compliance for your information systems.",
-        },
-        {
-          title: "Cloud & DevOps",
-          desc: "Industrialisation, infrastructure as code and platform observability.",
-        },
-        {
-          title: "Data & AI",
-          desc: "Data pipelines, dashboards and integration of AI models.",
         },
       ],
     },

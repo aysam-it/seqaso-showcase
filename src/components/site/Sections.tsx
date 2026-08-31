@@ -51,45 +51,13 @@ export function About() {
 
   return (
     <section id="about" className="relative scroll-mt-24 py-24 sm:py-32">
-      <div className="mx-auto grid w-[min(1180px,92%)] items-center gap-14 lg:grid-cols-2">
-        <div className="reveal relative">
-          <div className="glass relative aspect-square overflow-hidden rounded-3xl p-8">
-            <div className="grid-bg absolute inset-0 opacity-40" aria-hidden="true" />
-            <div className="orb size-64 -top-10 -right-10 bg-violet/30" aria-hidden="true" />
-            <div className="relative flex h-full flex-col justify-between">
-              <div className="flex items-center gap-3">
-                <span className="grid size-11 place-items-center rounded-xl bg-[image:var(--gradient-accent)] text-primary-foreground">
-                  <Workflow className="size-5" aria-hidden="true" />
-                </span>
-                <div className="h-px flex-1 bg-border" />
-                <span className="text-xs text-muted-foreground">SEQASO / 2026</span>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                {[Code2, TestTube2, Cloud, ShieldCheck].map((Icon, i) => (
-                  <div
-                    key={i}
-                    className="card-glow rounded-2xl border border-border bg-secondary/30 p-5"
-                  >
-                    <Icon className="size-6 text-primary" aria-hidden="true" />
-                    <div className="mt-4 h-1.5 w-3/4 rounded-full bg-[image:var(--gradient-accent)] opacity-70" />
-                    <div className="mt-2 h-1.5 w-1/2 rounded-full bg-border" />
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="size-2 animate-pulse rounded-full bg-primary" />
-                build · test · secure · deploy
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <SectionHeader kicker={t.about.kicker} title={t.about.title} center={false} />
+      <div className="mx-auto w-[min(1180px,92%)]">
+        <div className="mx-auto max-w-3xl text-center">
+          <SectionHeader kicker={t.about.kicker} title={t.about.title} />
           <p className="reveal mt-6 text-muted-foreground [transition-delay:140ms]">{t.about.body}</p>
           <p className="reveal mt-4 text-muted-foreground [transition-delay:180ms]">{t.about.body2}</p>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 text-left">
             {t.about.pillars.map((p, i) => {
               const Icon = pillarIcons[i] ?? Award;
               return (
@@ -116,7 +84,7 @@ export function Services() {
   const icons = [Code2, TestTube2, Bot, ShieldCheck, Cloud, Database];
 
   return (
-    <section id="services" className="relative scroll-mt-24 py-24 sm:py-32">
+    <section id="services" className="relative scroll-mt-24 py-16 sm:py-20">
       <div className="orb size-[26rem] top-20 left-1/2 -translate-x-1/2 bg-primary/12" aria-hidden="true" />
       <div className="relative mx-auto w-[min(1180px,92%)]">
         <SectionHeader kicker={t.services.kicker} title={t.services.title} subtitle={t.services.subtitle} />
@@ -182,7 +150,7 @@ export function TechWatch() {
   const icons = [Brain, Lock, Cpu];
 
   return (
-    <section id="watch" className="relative scroll-mt-24 py-24 sm:py-32">
+    <section id="watch" className="relative scroll-mt-24 py-16 sm:py-20">
       <div className="orb size-[24rem] -right-20 top-10 bg-violet/18" aria-hidden="true" />
       <div className="relative mx-auto w-[min(1180px,92%)]">
         <SectionHeader kicker={t.watch.kicker} title={t.watch.title} subtitle={t.watch.subtitle} />
@@ -247,7 +215,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 export function Stats() {
   const { t } = useLang();
   return (
-    <section id="stats" className="relative scroll-mt-24 py-20">
+    <section id="stats" className="relative scroll-mt-24 py-12 sm:py-16">
       <div className="mx-auto w-[min(1180px,92%)]">
         <div className="glass reveal rounded-3xl px-6 py-12 sm:px-12">
           <div className="mx-auto max-w-xl text-center">
