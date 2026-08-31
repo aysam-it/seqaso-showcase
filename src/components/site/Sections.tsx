@@ -4,20 +4,16 @@ import {
   Bot,
   Brain,
   Building2,
-  Cloud,
   Code2,
   Cpu,
-  Database,
   Factory,
   HeartPulse,
   Landmark,
   Lightbulb,
   Lock,
   Radio,
-  ShieldCheck,
   ShoppingCart,
   TestTube2,
-  Workflow,
 } from "lucide-react";
 import { useLang } from "@/lib/lang";
 
