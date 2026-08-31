@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X, ShieldCheck } from "lucide-react";
-import { useLang, useActiveSection } from "@/lib/lang";
+import { useLang } from "@/lib/lang-context";
+import { useActiveSection } from "@/lib/lang-hooks";
 import { sectionIds } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
