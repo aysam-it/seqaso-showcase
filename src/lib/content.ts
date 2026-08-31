@@ -259,7 +259,7 @@ export const content = {
         { value: 120, suffix: "+", label: "Projects delivered" },
         { value: 45, suffix: "", label: "In-house experts" },
         { value: 98, suffix: "%", label: "Satisfied clients" },
-        { value: 12, suffix: "", label: "Years of experience" },
+        { value: 15, suffix: "", label: "Years of experience" },
       ],
     },
     contact: {
